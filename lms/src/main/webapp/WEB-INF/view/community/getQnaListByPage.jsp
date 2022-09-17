@@ -57,7 +57,7 @@
           
 		<!-- 강의개설 실제부분 --> 
           <div class="row">
-            <div class="col-lg-6 grid-margin stretch-card">
+            <div class="col-lg-10 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   

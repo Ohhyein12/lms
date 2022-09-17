@@ -35,49 +35,49 @@
 	href="${pageContext.request.contextPath}/images/tftace.jpg" />
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <style type="text/css">/* Chart.js */
-@
-keyframes chartjs-render-animation {
-	from {opacity: .99
-}
-
-to {
-	opacity: 1
-}
-
-}
-.chartjs-render-monitor {
-	animation: chartjs-render-animation 1ms
-}
-
-.chartjs-size-monitor, .chartjs-size-monitor-expand,
-	.chartjs-size-monitor-shrink {
-	position: absolute;
-	direction: ltr;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	pointer-events: none;
-	visibility: hidden;
-	z-index: -1
-}
-
-.chartjs-size-monitor-expand>div {
-	position: absolute;
-	width: 1000000px;
-	height: 1000000px;
-	left: 0;
-	top: 0
-}
-
-.chartjs-size-monitor-shrink>div {
-	position: absolute;
-	width: 200%;
-	height: 200%;
-	left: 0;
-	top: 0
-}
+	@
+	keyframes chartjs-render-animation {
+		from {opacity: .99
+	}
+	
+	to {
+		opacity: 1
+	}
+	
+	}
+	.chartjs-render-monitor {
+		animation: chartjs-render-animation 1ms
+	}
+	
+	.chartjs-size-monitor, .chartjs-size-monitor-expand,
+		.chartjs-size-monitor-shrink {
+		position: absolute;
+		direction: ltr;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		pointer-events: none;
+		visibility: hidden;
+		z-index: -1
+	}
+	
+	.chartjs-size-monitor-expand>div {
+		position: absolute;
+		width: 1000000px;
+		height: 1000000px;
+		left: 0;
+		top: 0
+	}
+	
+	.chartjs-size-monitor-shrink>div {
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		left: 0;
+		top: 0
+	}
 </style>
 
 </head>
@@ -102,7 +102,7 @@ to {
 				<div class="row">
 					<div class="main-panel">
 					
-						<div class="col-lg-6 grid-margin stretch-card">
+						<div class="col-lg-10 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
 									<div >
@@ -146,60 +146,60 @@ to {
 				<!-- End custom js for this page-->
 				<script type="text/javascript"
 					src="https://www.gstatic.com/charts/loader.js"></script>
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- <script>
-		  //차트에서 사용할 모델(데이터)로 가공
-	
-	
-		
-		$('#statsSelect').change(function() {
-			
-			var url = $(this).val();
-		
-		// 데이터를 호출
-		$(function(){
-		var myData =  [['lable','data']];
-		$.ajax({
-		   type:'get'
-		   ,url: url
-		   ,success:function(jsonData) {
-		      for(var i=0; i<jsonData.length; i++) {
-		       
-		         myData.push([jsonData[i].lable,jsonData[i].data])
-		      }
-		
-		
-		console.log(myData);
-		
-		
-		// 차트를 그리는 로직
-		
-		google.charts.load('current', {'packages':['corechart']});
-		google.charts.setOnLoadCallback(drawChart);
-		
-		function drawChart() {
-		   var data = google.visualization.arrayToDataTable(myData);
-			
-		      var options = {
-		    	        width: 600,
-		    	        height: 400,
-		    	        legend: { position: 'top', maxLines: 3 },
-		    	        bar: { groupWidth: '75%' },
-		    	        isStacked: true,
-		    	      };
-			var chart = new google.visualization.ColumnChart(document.getElementById('myChart'));
-			  chart.draw(data, options);
-			};
-
-		
-		}
-		});
-		});
-		});
-	
-	
-
-</script>
+				 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				 <script>
+						  //차트에서 사용할 모델(데이터)로 가공
+					
+					
+						
+						$('#statsSelect').change(function() {
+							
+							var url = $(this).val();
+						
+						// 데이터를 호출
+						$(function(){
+						var myData =  [['lable','data']];
+						$.ajax({
+						   type:'get'
+						   ,url: url
+						   ,success:function(jsonData) {
+						      for(var i=0; i<jsonData.length; i++) {
+						       
+						         myData.push([jsonData[i].lable,jsonData[i].data])
+						      }
+						
+						
+						console.log(myData);
+						
+						
+						// 차트를 그리는 로직
+						
+						google.charts.load('current', {'packages':['corechart']});
+						google.charts.setOnLoadCallback(drawChart);
+						
+						function drawChart() {
+						   var data = google.visualization.arrayToDataTable(myData);
+							
+						      var options = {
+						    	        width: 600,
+						    	        height: 400,
+						    	        legend: { position: 'top', maxLines: 3 },
+						    	        bar: { groupWidth: '75%' },
+						    	        isStacked: true,
+						    	      };
+							var chart = new google.visualization.ColumnChart(document.getElementById('myChart'));
+							  chart.draw(data, options);
+							};
+				
+						
+						}
+						});
+						});
+						});
+					
+					
+				
+				</script>
 
 </body>
 </html>
