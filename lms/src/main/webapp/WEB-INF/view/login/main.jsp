@@ -96,9 +96,6 @@
 		<jsp:include page="/inc/topbar.jsp" />
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
-			<!-- partial:partials/_settings-panel.html -->
-
-			<!-- partial -->
 			<!-- partial:partials/_sidebar.html -->
 			<nav class="sidebar sidebar-offcanvas" id="sidebar">
 				<jsp:include page="/inc/sidebar.jsp" />

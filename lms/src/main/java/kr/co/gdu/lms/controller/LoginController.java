@@ -234,6 +234,7 @@ public class LoginController {
 		// 회원 가입 성공했다면 login페이지로
 		return "redirect:/login";
 	}
+	
 	// 로그아웃
 	@GetMapping("/loginCheck/logout")
 	public String logout(HttpSession session) {
