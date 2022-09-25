@@ -24,6 +24,9 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/images/tftace.jpg" />
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+  	.bottom {margin-bottom : 30px;}
+  </style>
 </head>
 <body>
   <div class="container-scroller">
@@ -31,9 +34,6 @@
     <jsp:include page="/inc/topbar.jsp"/>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_settings-panel.html -->
-      
-      <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <jsp:include page="/inc/sidebar.jsp"/>
@@ -42,29 +42,23 @@
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h1>[QnAList]</h1>
-                </div>
-                <div class="col-12 col-xl-4">
-                 <div class="justify-content-end d-flex">
-                 </div>
-                </div>
-              </div>
-            </div>
+	          <div class="col-md-12 grid-margin">
+		          <div class="row">
+			          <div class="col-12 col-xl-4">
+				           <div class="justify-content-end d-flex">
+				           </div>
+			          </div>
+		          </div>
+	          </div>
           </div>
           
-		<!-- 강의개설 실제부분 --> 
+		  <!-- 문의리스트 시작 --> 
           <div class="row">
             <div class="col-lg-10 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  
-                  <div style=" display: flex; width: 100%">
-                  <h4 class="card-title">문의리스트</h4> 
-                  <a href="${pageContext.request.contextPath}/loginCheck/addQna" class="float-right" style="float: right;">[글쓰기]</a>
-                  </div>
+	              <h3>[문의사항]</h3> 
+                  <a href="${pageContext.request.contextPath}/loginCheck/addQna" class="float-right btn btn-secondary bottom">문의하기</a>
                   <p class="card-description">
                   </p>
                   <div class="table-responsive">
@@ -94,20 +88,17 @@
                 </div>
               </div>
             </div>
-          
           </div>
-          <!-- 강의개설 끝 -->
-          
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <!-- partial -->
+          <!-- 문의리스트 끝 -->
+          <!-- partial:partials/_footer.html -->
+		  <jsp:include page="/inc/footer.jsp" />
       </div>
       <!-- main-panel ends -->
     </div>   
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
-
+ </div>
   <!-- plugins:js -->
   <script src="${pageContext.request.contextPath}/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->

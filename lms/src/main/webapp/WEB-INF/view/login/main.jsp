@@ -174,9 +174,6 @@
 		<!-- partial -->
 	</div>
 	<!-- main-panel ends -->
-	</div>
-	</div>
-	</div>
 	<!-- plugins:js -->
 	<script
 		src="${pageContext.request.contextPath}/vendors/js/vendor.bundle.base.js"></script>
@@ -208,8 +205,7 @@
 		src="${pageContext.request.contextPath}/js/Chart.roundedBarCharts.js"></script>
 	<!-- End custom js for this page-->
 	<script type="text/javascript">
-		$
-				.ajax({
+		$.ajax({
 					url : '/lms/weather',
 					type : 'get',
 					timeout : 30000,
